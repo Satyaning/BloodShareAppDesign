@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/vertical_margin"
+    android:paddingBottom="@dimen/vertical_margin"
+    android:paddingLeft="@dimen/horizontal_margin"
+    android:paddingRight="@dimen/horizontal_margin"
+    tools:context=".LoginActivity"
+    android:background="@color/light_blue">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/ic_welcome_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/UsernameBox"
+       android:layout_width="0dp"
+       android:layout_marginTop="48dp"
+        android:gravity="center_vertical"
+       android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/text_login"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+
+    <EditText
+        android:id="@+id/PasswordBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_text_padding"
+        android:gravity="center_vertical"
+        android:paddingVertical="@dimen/edit_text_padding"
+        android:inputType="textPassword"
+        android:hint="@string/box_password"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UsernameBox"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/field_margin"
+        android:textColor="@color/btn_light"
+        android:text="@string/text_login"
+        android:theme="@style/Theme.AppCompat.Light"
+        android:background="@drawable/btn_outline_light"
+        style="@style/Theme.Bloodshare.Borderless"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordBox"/>
+    <TextView
+        android:id="@+id/textLoginOr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/field_margin"
+        android:layout_marginBottom="@dimen/field_margin"
+        android:text="@string/text_login_or"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+    <Button
+        android:id="@+id/btnLoginFB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/field_margin"
+        android:textColor="@color/btn_light"
+        app:icon="@drawable/ic_welcome_fb_login"
+        app:iconGravity="textStart"
+        android:background="@drawable/btn_outline_light"
+        android:text="@string/text_login_fb"
+        android:theme="@style/Theme.AppCompat.Light"
+        style="@style/Theme.Bloodshare.Borderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLoginOr" />
+
+    <TextView
+        android:id="@+id/registerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/field_margin"
+        android:text="@string/register_text"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLoginFB" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
